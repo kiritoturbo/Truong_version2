@@ -8,15 +8,15 @@
           'container' => 'false',
           'menu_id' => 'nav-list',
           'menu_class' => 'nav-list'
-        )
+          )
       ); ?>
     </div>
     <div class="footer-content">
       <h2 class="heading">
         <?php
-        global $post;
-        $value = get_post_meta($post->ID, 'companyName', true);
-        echo $value;
+          global $post;
+          $value = get_post_meta($post->ID, 'companyName', true);
+          echo $value;
         ?>
       </h2>
       <div class="item">

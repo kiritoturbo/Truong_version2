@@ -63,25 +63,19 @@
 
                 <div class="right">
                     <?php
-                    $args = array(
-                        'post_status' => 'publish',
-                        'showposts' => 2,
-                        'offset' => 1
-                    );
+                        $args = array(
+                            'post_status' => 'publish',
+                            'showposts' => 2,
+                            'offset' => 1
+                        );
                     ?>
                     <?php $getposts = new WP_query($args); ?>
-                    <?php global $wp_query;
-                    $wp_query->in_the_loop = true; ?>
+                    <?php 
+                        global $wp_query;
+                        $wp_query->in_the_loop = true; 
+                    ?>
                     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-                        <div class="item">
-                            <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail(get_the_id(), 'full', array('class' => 'thumnail')); ?></a>
-                            <p class="name">Sự kiện</p>
-                            <h2 class="title">
-                                <?php the_title(); ?>
-                            </h2>
-                            <p class="time"><?php echo get_the_date('d - m - Y'); ?></p>
-                            <div class="line"></div>
-                        </div>
+                        <?php  include wp2023_path."/template-parts/item-content.php";?>
                     <?php endwhile;
                     wp_reset_postdata(); ?>
                 </div>
@@ -96,7 +90,7 @@
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php if (paginate_links() != '') { ?>
-                        <div class="quatrang">
+                        <div class="quatrang" style="margin:38px auto">
                             <?php
                             global $wp_query;
                             $big = 999999999;

@@ -1,8 +1,6 @@
 <?php 
 define('wp2023_path',plugin_dir_path(__FILE__));
 
-
-
 function theme_settup(){
     register_nav_menu('topmenu',__( 'Menu chính' ));
     add_theme_support('post-thumbnails');
@@ -170,3 +168,10 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
     
 }
+
+
+// function my_skip_mail($f){
+//     $submission = WPCF7_Submission::get_instance();
+//     return true; // DO NOT SEND E-MAIL    
+// }
+// add_filter('wpcf7_skip_mail','my_skip_mail');

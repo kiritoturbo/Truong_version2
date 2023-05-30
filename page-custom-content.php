@@ -1,6 +1,5 @@
 <?php
     /* Template Name: Page Primany  */
-
 ?>
 <?php get_header() ?>
 <!-- get feild   -->

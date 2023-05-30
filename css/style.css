@@ -225,7 +225,6 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 94px 50px;
-  background-color: #e9e7e7;
 }
 
 /* form search  */
@@ -1079,12 +1078,9 @@ a {
     margin: 30px auto;
   }
 
- .quatrang{
-    margin: 38px auto;
-  }
 
-  .footer .list .item{
-    width: 56px ;
+  .footer .list .item {
+    width: 56px;
     height: 56px;
     object-fit: cover;
   }

@@ -1,5 +1,9 @@
-<?php get_header() ?>
-<main class="main">
+<?php get_header() ;
+global $wp_query;
+?>
+<main class="main" data-page="<?php echo get_query_var('paged') ? get_query_var('paged'):1; ?>"
+    data-max="<?php echo $wp_query->max_num_pages;?>"
+    >
     <div class="wrapper details">
         <div class="astra-details-nav">
             <div class="list">
@@ -41,19 +45,18 @@
                     <h1 class="title">đọc thêm</h1>
                 </div>
                 <div class="list">
-
-                <?php
-                    $args = array(
-                        'post_status' => 'publish',
-                        'showposts' => 3,
-                        'offset' =>3
-                    );
+                    <?php
+                        $args = array(
+                            'post_status' => 'publish',
+                            'showposts' => 3,
+                            'offset' =>3
+                        );
                     ?>
                     <?php $getposts = new WP_query($args); ?>
                     <?php global $wp_query;
                     $wp_query->in_the_loop = true; ?>
                     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-                       <?php  include wp2023_path."/template-parts/item-content.php";?>
+                        <?php  include wp2023_path."/template-parts/item-content.php";?>
                     <?php endwhile;
                     wp_reset_postdata(); ?>
                 </div>
