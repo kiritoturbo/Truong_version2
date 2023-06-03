@@ -28,7 +28,7 @@
             </ul>
 
             <div class="widget">
-                <div class="form-wrapper">
+                <div class="form-wrapper animated wow slideInLeft animate__animated animate__delay-1s animate__fadeInTopLeft">
                     <form action="<?php get_permalink() ?> " method="GET" role="form">
                         <input type="text" name='s' class="form-control" id="search" placeholder="Nhập từ khóa ">
                         <button class="btn" id="submit" type="submit" style="border:1px solid #ccc">Tìm kiếm</button>
@@ -38,7 +38,7 @@
         </div>
         <div class="astra">
             <section class="list-top">
-                <div class="left">
+                <div class="left wow slideInRight animate__animated animate__delay-1s animate__backInLeft">
                     <?php
                     $args = array(
                         'post_status' => 'publish',
@@ -61,21 +61,21 @@
                     wp_reset_postdata(); ?>
                 </div>
 
-                <div class="right">
+                <div class="right wow slideInRight animate__animated animate__delay-1s animate__backInRight">
                     <?php
-                        $args = array(
-                            'post_status' => 'publish',
-                            'showposts' => 2,
-                            'offset' => 1
-                        );
+                    $args = array(
+                        'post_status' => 'publish',
+                        'showposts' => 2,
+                        'offset' => 1
+                    );
                     ?>
                     <?php $getposts = new WP_query($args); ?>
-                    <?php 
-                        global $wp_query;
-                        $wp_query->in_the_loop = true; 
+                    <?php
+                    global $wp_query;
+                    $wp_query->in_the_loop = true;
                     ?>
                     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-                        <?php  include wp2023_path."/template-parts/item-content.php";?>
+                        <?php include wp2023_path . "/template-parts/item-content.php"; ?>
                     <?php endwhile;
                     wp_reset_postdata(); ?>
                 </div>
@@ -86,7 +86,7 @@
                 <div class="list">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : the_post(); ?>
-                            <?php  include wp2023_path."/template-parts/item-content.php";?>
+                            <?php include wp2023_path . "/template-parts/item-content.php"; ?>
                         <?php endwhile; ?>
                     <?php endif; ?>
                     <?php if (paginate_links() != '') { ?>

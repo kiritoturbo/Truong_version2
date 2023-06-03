@@ -1,6 +1,6 @@
 <?php get_header() ?>
-<main class="main" <?php body_class(); ?>>
-  <section class="hero" style="background-image: url(<?php header_image(); ?> );">
+<main class="main " <?php body_class(); ?>>
+  <section class="hero wow slideInLeft" style="background-image: url(<?php header_image(); ?> );">
     <div class="hero-content">
       <h1 class="heading">
         <?php echo esc_html(get_field('dong_so_1_chu_to', 'option')); ?>
@@ -19,12 +19,12 @@
       <img src="<?php bloginfo('template_directory') ?>/images/hero-img.png" alt="" />
     </div>
   </section>
-  <section class="about">
+  <section class="about wow slideInRight">
     <div class="about-img">
       <img src="<?php bloginfo('template_directory') ?>/images/about-img.png" alt="" />
     </div>
     <div class="about-content">
-      <h2 class="slogan">Chúng tôi là</h2>
+      <h2 class="slogan animate__animated animate__bounce">Chúng tôi là</h2>
       <div class="wrap">
         <h2 class="heading">Akadon application technology co., ltd</h2>
         <div class="content-item">

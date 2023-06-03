@@ -1,23 +1,25 @@
 <?php get_header() ?>
-<main class="main" <?php body_class(); ?>>
-<div class="wrapper details">
-      <div class="list-bottom">
-        <div class="list">
-            <?php 
-            $args = array(
-              'post_status' => 'publish', // Chỉ lấy những bài viết được publish
-              'showposts' => 12, // số lượng bài viết
-            );
-            ?>
-            <?php $getposts = new WP_query($args); ?>
-            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
-            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-              <?php  include wp2023_path."/template-parts/item-content.php";?>
-            <?php endwhile; wp_reset_postdata(); ?>
-        </div>
+<main class="main " <?php body_class(); ?>>
+  <div class="wrapper details animate__animated animate__zoomIn">
+    <div class="list-bottom">
+      <div class="list">
+        <?php
+        $args = array(
+          'post_status' => 'publish', // Chỉ lấy những bài viết được publish
+          'showposts' => 12, // số lượng bài viết
+        );
+        ?>
+        <?php $getposts = new WP_query($args); ?>
+        <?php global $wp_query;
+        $wp_query->in_the_loop = true; ?>
+        <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+          <?php include wp2023_path . "/template-parts/item-content.php"; ?>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
       </div>
+    </div>
 
-      <?php if (paginate_links() != '') { ?>
+    <?php if (paginate_links() != '') { ?>
       <div class="quatrang" style="margin:38px auto">
         <?php
         global $wp_query;
@@ -33,7 +35,7 @@
         ?>
       </div>
     <?php } ?>
-</div>
+  </div>
 
 </main>
 

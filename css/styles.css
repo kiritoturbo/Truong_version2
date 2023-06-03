@@ -7,16 +7,17 @@
 }
 
 
-.quatrang .page-numbers{
+.quatrang .page-numbers {
   padding: 11px;
   background: #0367b4;
   color: #fff;
 }
 
-.quatrang .current{
+.quatrang .current {
   background: #8a88f3;
-  
+
 }
+
 .nav ul {
   display: flex;
   gap: 20px;

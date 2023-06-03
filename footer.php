@@ -8,15 +8,15 @@
           'container' => 'false',
           'menu_id' => 'nav-list',
           'menu_class' => 'nav-list'
-          )
+        )
       ); ?>
     </div>
     <div class="footer-content">
       <h2 class="heading">
         <?php
-          global $post;
-          $value = get_post_meta($post->ID, 'companyName', true);
-          echo $value;
+        global $post;
+        $value = get_post_meta($post->ID, 'companyName', true);
+        echo $value;
         ?>
       </h2>
       <div class="item">
@@ -48,6 +48,31 @@
       </div>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    window.onload = function onLoad() {
+      var circle = new ProgressBar.Line('#progress', {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 3000,
+        color: '#FFEA82',
+        trailColor: '#eee',
+        trailWidth: 4,
+        svgStyle: {
+          width: '100%',
+          height: '100%'
+        }
+      });
+      circle.animate(1);
+    };
+  </script>
 </footer>
 <?php wp_footer(); ?>
 </body>
