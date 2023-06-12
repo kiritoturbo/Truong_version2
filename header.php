@@ -12,7 +12,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class() ?>>
     <header class="header ">
         <div class="wrapper">
             <label for="menu-input" class="menu-icon">

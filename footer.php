@@ -50,28 +50,36 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.0/progressbar.min.js"></script> -->
+  <script src="https://newmedenergy.com/wp-content/themes/newmed/js/progressbar.min.js?ver=6.2.2"></script>
+
   <script>
     new WOW().init();
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    window.onload = function onLoad() {
-      var circle = new ProgressBar.Line('#progress', {
-        strokeWidth: 4,
-        easing: 'easeInOut',
-        duration: 3000,
-        color: '#FFEA82',
-        trailColor: '#eee',
-        trailWidth: 4,
-        svgStyle: {
-          width: '100%',
-          height: '100%'
-        }
-      });
-      circle.animate(1);
-    };
+    var circle = new ProgressBar.Line('#progress', {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 2000,
+      color: '#FFEA82',
+      trailColor: '#eee',
+      trailWidth: 4,
+      svgStyle: {
+        width: '100%',
+        height: '100%'
+      }
+    });
+    window.addEventListener('scroll', function() {
+      if (document.documentElement.scrollTop > 1000) {
+        circle.animate(1);
+
+      }
+    });
+
+
+    console.log('sdlfasdf', scroll_y);
   </script>
 </footer>
 <?php wp_footer(); ?>

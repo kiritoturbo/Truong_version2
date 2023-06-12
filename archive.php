@@ -28,7 +28,7 @@
             </ul>
 
             <div class="widget">
-                <div class="form-wrapper animated wow slideInLeft animate__animated animate__delay-1s animate__fadeInTopLeft">
+                <div class="form-wrapper animated wow slideInLeft animate__animated animate__fadeInTopLeft">
                     <form action="<?php get_permalink() ?> " method="GET" role="form">
                         <input type="text" name='s' class="form-control" id="search" placeholder="Nhập từ khóa ">
                         <button class="btn" id="submit" type="submit" style="border:1px solid #ccc">Tìm kiếm</button>
@@ -38,7 +38,7 @@
         </div>
         <div class="astra">
             <section class="list-top">
-                <div class="left wow slideInRight animate__animated animate__delay-1s animate__backInLeft">
+                <div class="left wow slideInRight animate__animated animate__backInLeft">
                     <?php
                     $args = array(
                         'post_status' => 'publish',
@@ -61,7 +61,7 @@
                     wp_reset_postdata(); ?>
                 </div>
 
-                <div class="right wow slideInRight animate__animated animate__delay-1s animate__backInRight">
+                <div class="right wow slideInRight animate__animated  animate__backInRight">
                     <?php
                     $args = array(
                         'post_status' => 'publish',

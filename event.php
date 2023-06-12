@@ -1,7 +1,7 @@
 <section class="news">
     <h2 class=" title animated wow animate__animated animate__delay-1s animate__flipInX">tin tức và sự kiện</h2>
     <h1 class="container-heading heading animated wow animate__animated animate__delay-1s animate__lightSpeedInRight" style="position: relative;z-index: 10000;">các tin tức và sự kiện mới của <?php bloginfo('name'); ?>
-        <div class="progress-bar wow slideInLeft animate__delay-2s" id="progress" style="position: absolute;top:20px;left:50%;transform: translateX(-40%);z-index:-1;height: 72%;width: 58%;"></div>
+        <div class="" id="progress" style="position: absolute;top:20px;left:50%;transform: translateX(-40%);z-index:-1;height: 72%;width: 58%;"></div>
     </h1>
 
     <div class="news-list animated wow animate__animated  animate__lightSpeedInLeft">
